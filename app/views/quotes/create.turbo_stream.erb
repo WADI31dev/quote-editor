@@ -1,0 +1,15 @@
+<%= turbo_stream.prepend "quotes", partial: "quotes/quote", locals: { quote: @quote } %>
+<%= turbo_stream.update Quote.new, "" %>
+
+<!-- Other valid entry : --> 
+
+<%#= turbo_stream.prepend "quotes" do %>
+  <%#= render partial: "quotes/quote", locals: { quote: @quote } %>
+<%# end %>
+
+<%#= turbo_stream.update Quote.new, "" %>
+
+<!-- Other valid entry also : --> 
+
+<%#= turbo_stream.prepend "quotes", @quote %>
+<%#= turbo_stream.update Quote.new, "" %>
